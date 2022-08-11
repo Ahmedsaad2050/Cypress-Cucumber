@@ -3,7 +3,6 @@ const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://www.deinbett.de',
     specPattern: "**/*.feature",
     
     setupNodeEvents(on, config) {
