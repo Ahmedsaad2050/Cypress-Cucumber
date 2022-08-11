@@ -1,12 +1,13 @@
 import { Given , And , Then , When} from "cypress-cucumber-preprocessor/steps";
+import 'cypress-mochawesome-reporter/register';
 const faker = require("faker");
 const firstName = faker.name.firstName();
 const lastName = faker.name.lastName();
 const email = faker.internet.email();
 const password = faker.internet.password()+'T@s1';
+
 Given('A user open the home url', ()=> {
     cy.visit('/')
-
 })
 When('A user Register with random credentials', ()=> {
     cy.get('[data-accept-action="selected"] > .button').click()
