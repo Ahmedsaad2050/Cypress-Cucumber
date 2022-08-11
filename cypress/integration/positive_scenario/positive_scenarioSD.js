@@ -5,7 +5,7 @@ const lastName = faker.name.lastName();
 const email = faker.internet.email();
 const password = faker.internet.password()+'T@s1';
 Given('A user open the home url', ()=> {
-    cy.visit('https://www.deinbett.de')
+    cy.visit('/')
 
 })
 When('A user Register with random credentials', ()=> {
