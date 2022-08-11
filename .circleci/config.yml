@@ -9,7 +9,6 @@ workflows:
       - cypress/run: 
           requires:
             - cypress/install
-          
           wait-on: https://www.deinbett.de
           record: false # record results on Cypress Dashboard
           parallel: true # split all specs across machines
