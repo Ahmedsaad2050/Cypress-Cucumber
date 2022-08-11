@@ -1,0 +1,31 @@
+{
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "Test Automation using Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "runner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ahmedsaad2050"
+  },
+  "keywords": [
+    "cypress",
+    "cucumbet"
+  ],
+  "author": "Ahmed Saad",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.4.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "stepDefinitions": "cypress/integration/**/*.js"
+
+}

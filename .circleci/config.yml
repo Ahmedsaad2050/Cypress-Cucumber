@@ -1,0 +1,17 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@2.1.0
+workflows:
+  build:
+    jobs:
+      - cypress/install:
+          build: npm install --save-dev cypress-cucumber-preprocessor 
+      - cypress/run: 
+          requires:
+            - cypress/install
+          
+          wait-on: https://www.deinbett.de
+          record: false # record results on Cypress Dashboard
+          parallel: true # split all specs across machines
+          parallelism: 2 # use 4 CircleCI machines to finish quickly
+          group: 'all tests' # name this group "all tests" on the dashboard
