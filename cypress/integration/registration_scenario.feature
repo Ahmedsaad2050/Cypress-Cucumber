@@ -6,7 +6,7 @@ Feature: Positive_Scenario
     Then The user should be logged in successfully
     When The user log out
     And Request a password reset
-    # Then The user should get the mail reset msg
+    Then The user should get the mail reset msg
     When The user login
     And Edit the password
     Then It should be updated with new random password
