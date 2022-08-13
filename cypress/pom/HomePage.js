@@ -36,7 +36,8 @@ class HomePage{
     }//cy.go('back')
 
     clickWishlistBtn(){
-        this.elements.wishlistBtn().click()
+        this.elements.wishlistBtn().scrollIntoView().should('be.visible')
+        this.elements.wishlistBtn().scrollIntoView().click({force: true})
     }
     clickMyWishlistBtn(){
         this.elements.myWishlistBtn().scrollIntoView().should('be.visible')
