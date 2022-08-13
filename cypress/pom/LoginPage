@@ -13,13 +13,14 @@ class LoginPage{
         UpdatedPassword: () => cy.get('#password'),
         UpdatedPassword2: () => cy.get('#passwordConfirm'),
         SubmitPasswordUpdateBtn: () => cy.get('#submitPassword'),
-        LoginEmailError: () => cy.get('#loginEmail-error')
+        LoginEmailError: () => cy.get('#loginEmail-error'),
 
 //
 
         
 
     }
+    
     clickRegister(){
         this.elements.RegisterAccount().click()
     }
@@ -70,6 +71,7 @@ class LoginPage{
         this.elements.LoginEmailError().should('contain','Benutzername nicht gefunden oder Passwort falsch.')
 
     }
+    
 }
 
 module.exports = new LoginPage()

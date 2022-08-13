@@ -1,4 +1,4 @@
-Feature: Positive_Scenario
+Feature: Registration_Scenario
     Feature This is for Registration successfully
     Scenario: Success Register
     Given A user open the home url
