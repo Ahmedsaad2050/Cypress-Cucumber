@@ -12,8 +12,7 @@ const lastName = faker.name.lastName()
 const email = faker.internet.email()
 const password = faker.internet.password()+'T@s1'
 const new_password = faker.internet.password()+'T@s2';
-let totalCalculated
-let itemPrice1
+
 Given('A user open the home url', ()=> {
     HomePage.goToHome();
     HomePage.clickAccept()
@@ -96,29 +95,20 @@ When('The user can select 5 items',()=> {
     // const itemPrice1
     HomePage.getItemPrice().then(function(text){
         cy.log((text).text())
-        itemPrice1=itemPrice1+cy.wrap((text).text())
-        return cy.wrap((text).text())
-
     })
-    cy.log(itemPrice1)
     HomePage.clickWishlistBtn()
     HomePage.goBack()
     HomePage.clickItem2()
-    const itemPrice2=HomePage.getItemPrice()
     HomePage.clickWishlistBtn()
     HomePage.goBack()
     HomePage.clickItem3()
-    const itemPrice3=HomePage.getItemPrice()
     HomePage.clickWishlistBtn()
     HomePage.goBack()
     HomePage.clickItem4()
-    const itemPrice4=HomePage.getItemPrice()
     HomePage.clickWishlistBtn()
     HomePage.goBack()
     HomePage.clickItem5()
-    const itemPrice5=HomePage.getItemPrice()
     HomePage.clickWishlistBtn()
-    totalCalculated= itemPrice1+itemPrice2+itemPrice3+itemPrice4+itemPrice5
 })
 And('A user go to wishlist to add items to Basket', ()=> {
     HomePage.clickMyWishlistBtn()
