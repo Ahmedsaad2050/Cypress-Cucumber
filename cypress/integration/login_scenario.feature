@@ -10,5 +10,5 @@ Feature: Login_Scenario
     When A user Login with Updated credentials
     Then The user should be logged in successfully
     When The user log out
-    And A user Login with Old credentials
+    And The user Login with Old credentials
     Then The user should NOT be logged in with errorMSG

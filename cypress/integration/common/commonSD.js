@@ -50,13 +50,6 @@ Then('The user should get the mail reset msg', ()=> {
     ForgetPasswordPage.validateResetMsg()
 })
 
-When ('The user login', ()=> {
-    HomePage.verifyLoggedOutProfile()
-    HomePage.clickLoggedOutProfile()
-    LoginPage.enterEmail(email)
-    LoginPage.enterPassword(password)
-    LoginPage.clickLogInButton()
-})
 And ('Edit the password', ()=> {
     HomePage.verifyLoggedInProfile()
     HomePage.clickLoggedInProfile()
@@ -79,7 +72,7 @@ When('A user Login with Updated credentials', ()=> {
     LoginPage.enterPassword(new_password)
     LoginPage.clickLogInButton()
 })
-And('A user Login with Old credentials', ()=> {
+And('The user Login with Old credentials', ()=> {
     HomePage.verifyLoggedOutProfile()
     HomePage.clickLoggedOutProfile()
     LoginPage.enterEmail(email)
@@ -92,7 +85,6 @@ Then('The user should NOT be logged in with errorMSG', ()=> {
 When('The user can select 5 items',()=> {
     HomePage.clickDealsBtn()
     HomePage.clickItem1()
-    // const itemPrice1
     HomePage.getItemPrice().then(function(text){
         cy.log((text).text())
     })

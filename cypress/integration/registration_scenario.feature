@@ -7,7 +7,7 @@ Feature: Registration_Scenario
     When The user log out
     And Request a password reset
     Then The user should get the mail reset msg
-    When The user login
+    When The user Login with Old credentials
     And Edit the password
     Then It should be updated with new random password
 

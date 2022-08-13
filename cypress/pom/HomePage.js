@@ -23,46 +23,40 @@ class HomePage{
     }
     getItemPrice(){
         return this.elements.itemPrice()
-        // .then(($text) => {
-        //     return cy.wrap($text.text())
-            // cy.log($text.text())
-            // cy.log(this.elements.itemPrice().its('text'))
-        //     // cy.log(value)
-            
-        //     })
     }
     goBack(){
         cy.go('back')
-    }//cy.go('back')
+    }
 
     clickWishlistBtn(){
         this.elements.wishlistBtn().scrollIntoView().should('be.visible')
         this.elements.wishlistBtn().scrollIntoView().click({force: true})
     }
     clickMyWishlistBtn(){
+        cy.wait(1000)
         this.elements.myWishlistBtn().scrollIntoView().should('be.visible')
-        this.elements.myWishlistBtn().scrollIntoView().click()
+        this.elements.myWishlistBtn().scrollIntoView().click({force: true})
     }
     clickItem1(){
-        this.elements.item1().click()
+        this.elements.item1().click({force: true})
     }
     clickItem2(){
-        this.elements.item2().click()
+        this.elements.item2().click({force: true})
     }
     clickItem3(){
-        this.elements.item3().click()
+        this.elements.item3().click({force: true})
     }
     clickItem4(){
-        this.elements.item4().click()
+        this.elements.item4().click({force: true})
     }
     clickItem5(){
-        this.elements.item5().click()
+        this.elements.item5().click({force: true})
     }
     clickAccept() {
-        this.elements.clickAccept().click()
+        this.elements.clickAccept().click({force: true})
     }
     clickLoggedOutProfile(){
-        this.elements.loggedOutProfile().click()
+        this.elements.loggedOutProfile().dblclick({force: true})
     }
     clickLoggedInProfile(){
         this.elements.loggedInProfile().dblclick({force: true})
@@ -76,9 +70,6 @@ class HomePage{
     verifyTitleHead(firstName, lastName){
         this.elements.titleHeadline().should('be.visible')
         this.elements.titleHeadline().should('contain','Hallo, '+firstName+' '+lastName)
-
     }
-    
-
 }
 module.exports = new HomePage()

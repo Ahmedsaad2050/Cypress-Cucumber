@@ -17,7 +17,7 @@ class ForgetPasswordPage{
         this.elements.PasswordForgottenSubmitButton().click()
     }
     validateResetMsg(){
-        cy.wait(2000)  
+        cy.wait(1000)  
         this.elements.ResetMsg().should('contain','Eine E-Mail mit den Anweisungen, um Dein Passwort zurückzusetzen wurde an Dich verschickt. Bitte überprüfe Dein Postfach.')
     }
 }
