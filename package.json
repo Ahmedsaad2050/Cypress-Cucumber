@@ -27,8 +27,8 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/integration/**/*.js",
-    "commonPath": "cypress/integration/common",
+    "stepDefinitions": "cypress/integration",
+    "commonPath": "cypress/integration",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",
@@ -36,5 +36,4 @@
       "fileSuffix": ".cucumber"
     }
   }
-  
 }
