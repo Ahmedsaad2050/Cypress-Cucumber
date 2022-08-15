@@ -13,7 +13,7 @@ class HomePage{
         item5: () => cy.get('[data-tile-position="10"] > .articleTile__content > .articleTile__info > .articleInfo'),
         wishlistBtn: () => cy.get('.wishlistIcon'),
         myWishlistBtn: () => cy.get('.headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__icon'),
-    }//
+    }
     goToHome() {
         cy.visit('/')
     }
@@ -33,7 +33,6 @@ class HomePage{
         this.elements.wishlistBtn().scrollIntoView().click({force: true})
     }
     clickMyWishlistBtn(){
-        cy.wait(1000)
         this.elements.myWishlistBtn().scrollIntoView().should('be.visible')
         this.elements.myWishlistBtn().scrollIntoView().click({force: true})
     }
