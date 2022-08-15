@@ -11,6 +11,5 @@ workflows:
             - cypress/install
           wait-on: https://www.deinbett.de
           record: false # record results on Cypress Dashboard
-          parallel: true # split all specs across machines
-          parallelism: 4 # use 4 CircleCI machines 
-          group: 'all tests' # name this group "all tests" on the dashboard
+          parallel: false # split all specs across machines
+          #parallelism: 4 # use 4 CircleCI machines 
