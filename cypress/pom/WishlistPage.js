@@ -2,7 +2,7 @@ class WishlistPage{
     elements = {
         addAllToBasket: () => cy.get('#addAddToWishlist'),
         postalCode: () => cy.get('.wishlist__postalCodeArea > #zipcode-logistic-input'),
-        basketBtn: () => cy.get('#overlayRight > .generalOverlay > .generalOverlay__content > .addToCartOverlay > .addToCartOverlay__footer > .addToCartOverlay__footerToCart > .addToCartOverlay__footerButton > .button')
+        basketBtn: () => cy.get('.headerBrand__element--cart > .headerElement > .headerElement__link > .headerElement__icon')
     }
     clickAddAllToBasket(){
         this.elements.addAllToBasket().should('be.visible')
